@@ -39,7 +39,7 @@ var storyData = {
     prolog_pembuka: {
         id: "prolog_pembuka", characterName: "", characterSprite: "",
         dialogueText: "Jakarta, Jumat malam. Hujan deras menghantam jendela kamar kos berukuran 3x4 meter di lantai dua sebuah rumah tua di kawasan Tebet. Jam digital di meja nakas menunjukkan pukul 23:47. Dari luar terdengar samar-suara knalpot motor yang menerobos genangan, diselingi guntur yang menggulung di kejauhan.\n\nDi balik pintu kamar yang setengah tertutup, seorang pemuda duduk di depan laptop dengan mata yang sudah memerah. Namanya Arka Pratama. Mahasiswa semester akhir jurusan Ilmu Politik yang sedang berjuang menyelesaikan skripsinya — atau setidaknya mencoba.",
-        expression: "normal", bgImage: "assets/images/cg_arka_searching_room.png",
+        expression: "normal", bgImage: "assets/images/bg_kamar_arka_malam.png",
         bgm: "assets/audio/bgm_rain_melancholic.mp3", sfx: "assets/audio/sfx_hujan_deras.mp3", choices: [], nextSceneId: "prolog_arka_1"
     },
 
@@ -60,7 +60,7 @@ var storyData = {
     prolog_glitch_1: {
         id: "prolog_glitch_1", characterName: "", characterSprite: "",
         dialogueText: "Layar laptop berkedip. Sekilas, seperti gangguan listrik biasa. Tapi kemudian terjadi lagi — dan kali ini bukan hanya layar. Lampu kamar berkedip. Kipas angin berhenti sejenak. Bahkan suara hujan di luar seolah meredup, seolah dunia sedang menarik napas.\n\nLalu layar monitor membesar sendiri. Bukan zoom biasa — ini seperti seseorang atau sesuatu yang mengambil alih tampilan. Ikon-ikon di desktop bergerak, jendela browser terbuka dan menutup dengan sendirinya. Dan di tengah kekacauan itu, muncul satu kalimat putih di atas layar hitam:\n\n\"Apakah kamu mendengar gaungnya?\"",
-        expression: "normal", bgImage: "assets/images/cg_arka_touch_anomaly.png",
+        expression: "normal", bgImage: "assets/images/bg_glitch_digital_void.png",
         bgm: "", sfx: "assets/audio/sfx_system_crash.mp3", choices: [], nextSceneId: "prolog_glitch_2"
     },
 
