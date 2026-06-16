@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gema dari NusaNet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h1 class="loading-title">Gema dari NusaNet</h1>
+            <p class="loading-subtitle">Memuat...</p>
+            <div class="loading-bar-container">
+                <div id="loading-bar" class="loading-bar"></div>
+            </div>
+            <p id="loading-text" class="loading-text">0%</p>
+        </div>
+    </div>
+
+    <!-- Main Game Container -->
+    <div id="game-container">
+        <!-- Background Layer -->
+        <div id="bg-layer" class="bg-layer"></div>
+
+        <!-- Character Sprite -->
+        <div id="character-layer" class="character-layer">
+            <img id="character-sprite" src="" alt="" class="character-sprite">
+        </div>
+
+        <!-- UI Layer -->
+        <div id="ui-layer" class="ui-layer">
+            <!-- Dialogue Box -->
+            <div id="dialog-box" class="dialogue-box">
+                <div id="dialog-inner">
+                    <div id="char-name" class="char-name hidden-name"></div>
+                    <div id="dialogue-text" class="dialogue-text"></div>
+                    <div id="page-indicator" class="page-indicator"></div>
+                    <div id="next-indicator" class="next-indicator">▼</div>
+                </div>
+            </div>
+
+            <!-- Choices Container -->
+            <div id="choices-container" class="choices-container hidden-choices"></div>
+        </div>
+
+        <!-- Control Buttons -->
+        <div id="controls" class="controls">
+            <button id="btn-log" class="ctrl-btn" title="Log">📜</button>
+            <button id="btn-save" class="ctrl-btn" title="Simpan">💾</button>
+            <button id="btn-load" class="ctrl-btn" title="Muat">📂</button>
+        </div>
+
+        <!-- Free Play Hotspots -->
+        <div id="freeplay-hotspots" class="freeplay-hotspots">
+            <div id="hotspot-pc" class="hotspot" onclick="openPC()" style="top:25%;left:15%;width:220px;height:100px;" title="PC"><span class="hotspot-label">🖥️ Periksa PC</span></div>
+            <div id="hotspot-phone" class="hotspot" onclick="openPhone()" style="top:60%;left:40%;width:180px;height:80px;" title="HP"><span class="hotspot-label">📱 Periksa HP</span></div>
+            <div id="hotspot-mirror" class="hotspot" onclick="openMirror()" style="top:20%;left:75%;width:160px;height:130px;" title="Cermin"><span class="hotspot-label">🪞 Periksa Cermin</span></div>
+            <div id="btn-next-story" class="btn-next-story disabled" onclick="tryAdvanceStory()">Lanjutkan Cerita →</div>
+        </div>
+
+        <!-- PC Overlay -->
+        <div id="pc-overlay" class="pc-overlay">
+            <div class="pc-window">
+                <div class="pc-header"><span>PC Desktop</span><button class="pc-close" onclick="closePC()">✕</button></div>
+                <div id="pc-desktop" class="pc-desktop"></div>
+            </div>
+        </div>
+
+        <!-- Phone Overlay -->
+        <div id="phone-overlay" class="phone-overlay">
+            <div class="phone-window">
+                <div class="phone-header"><span>Notifikasi</span><button class="phone-close" onclick="closePhone()">✕</button></div>
+                <div class="phone-notification">"Apakah kamu mendengar gaungnya?"<br><small>Unknown</small></div>
+            </div>
+        </div>
+
+        <!-- Mirror Overlay -->
+        <div id="mirror-overlay" class="mirror-overlay">
+            <div class="mirror-window">
+                <p>Kamu melihat bayanganmu sendiri... atau bukan?</p>
+                <button class="mirror-close" onclick="closeMirror()">Tutup</button>
+            </div>
+        </div>
+
+        <!-- Static Overlay (for mirror glitch) -->
+        <div id="static-overlay" class="static-overlay"></div>
+
+        <!-- Free Play Dialog Box -->
+        <div id="fp-dialog-box" class="fp-dialog-box">
+            <div id="fp-char-name" class="fp-char-name"></div>
+            <div id="fp-dialogue-text" class="fp-dialogue-text"></div>
+            <div class="fp-dismiss" onclick="dismissFpDialog()">▼</div>
+        </div>
+
+        <!-- Log Overlay -->
+        <div id="log-overlay" class="log-overlay">
+            <div class="log-panel">
+                <h2>Riwayat Dialog</h2>
+                <div id="log-content" class="log-content"></div>
+                <button id="btn-close-log" class="btn-close-log">Tutup</button>
+            </div>
+        </div>
+
+        <!-- Notification -->
+        <div id="save-notification" class="save-notification"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/story-data.js"></script>
+    <script src="js/game-engine.js"></script>
+</body>
+</html>
