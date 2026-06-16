@@ -8,7 +8,7 @@ var storyData = {
         id: "P0_1_SAY_GOODBYE", characterName: "", characterSprite: "",
         dialogueText: "Kampus sudah mulai sepi. Mahasiswa-mahasiswa terakhir berlarian mengejar angkot dan ojol di gerbang depan. Langit sore Jakarta berwarna jingga keunguan, dicoret oleh kabel-kabel listrik yang berjuntai di atas jalan.\n\nDi antara mereka, seorang pemuda berjalan sendirian menuju halte. Tas ranselnya tampak berat — bukan hanya berisi buku, tapi juga kelelahan yang sudah menumpuk berbulan-bulan.\n\nNamanya Arka Pratama. Mahasiswa semester akhir. Dan hari ini, seperti hari-hari sebelumnya, ia pulang dengan perasaan hampa yang sulit dijelaskan.",
         expression: "normal", bgImage: "assets/images/cg_arka_say_goodbye.png",
-        bgm: "assets/audio/bgm_academic_warm.mp3", sfx: "assets/audio/sfx_crowd_chatter.mp3", choices: [], nextSceneId: "P0_2_RIDING_BUS"
+        bgm: "assets/audio/bgm_academic_warm.mp3", sfx: "assets/audio/sfx_bird_chirp.mp3", choices: [], nextSceneId: "P0_2_RIDING_BUS"
     },
 
     P0_2_RIDING_BUS: {
